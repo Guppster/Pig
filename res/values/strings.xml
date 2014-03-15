@@ -4,5 +4,9 @@
     <string name="app_name">Pig</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="btnRoll">Roll</string>
+    <string name="btnHold">Hold</string>
+    <string name="txtPlayerOne">Player 1:</string>
+    <string name="txtPlayerTwo">Player 2:</string>
 
 </resources>

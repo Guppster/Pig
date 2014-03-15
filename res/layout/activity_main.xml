@@ -2,10 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#394264"
+    android:textColor="#9099b7"
     tools:context=".MainActivity" >
 
     <Button
@@ -15,7 +13,10 @@
         android:layout_above="@+id/btnRoll"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:text="Hold" />
+        android:background="#4fc4f6"
+        android:text="@string/btnHold"
+        android:layout_marginBottom="5dp"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btnRoll"
@@ -23,62 +24,78 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btnHold"
         android:layout_alignParentBottom="true"
-        android:text="Roll" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnHold"
-        android:layout_alignParentTop="true"
-        android:text="Player 1:"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
-        android:id="@+id/txtPlayerTwoScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView01"
-        android:layout_alignBottom="@+id/TextView01"
-        android:layout_alignLeft="@+id/txtPlayerOneScore"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
-        android:id="@+id/txtPlayerOneScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_marginLeft="14dp"
-        android:layout_toRightOf="@+id/textView2"
-        android:text="0"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:text="Player 2:"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
-        android:id="@+id/txtDice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:background="#11a8ab"
+        android:text="@string/btnRoll"
+        android:layout_marginBottom="5dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/txtRolled"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDice"
         android:layout_centerHorizontal="true"
-        android:text="@string/hello_world" />
+        android:layout_centerVertical="true"
+        android:text="@string/hello_world"
+        android:textColor="#9099b7" />
+
+    <TextView
+        android:id="@+id/txtPlayerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="34dp"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/txtRolled"
+        android:text="@string/txtPlayerOne"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:paddingLeft="10dp"
+    	android:layout_centerHorizontal="true"
+        android:textColor="#9099b7" />
+    
+     <TextView
+        android:id="@+id/txtPlayerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtPlayerOneScore"
+        android:layout_alignBottom="@+id/txtPlayerOneScore"
+        android:layout_alignLeft="@+id/txtPlayerOne"
+        android:text="@string/txtPlayerTwo"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:paddingLeft="10dp"
+    	android:layout_centerHorizontal="true"
+        android:textColor="#9099b7" />
+
+    <TextView
+        android:id="@+id/txtPlayerOneScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPlayerTwoScore"
+        android:layout_alignRight="@+id/txtPlayerTwoScore"
+        android:layout_below="@+id/txtPlayerTwoScore"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#9099b7" />
+
+    <TextView
+        android:id="@+id/txtPlayerTwoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtPlayerOne"
+        android:layout_alignBottom="@+id/txtPlayerOne"
+        android:layout_alignRight="@+id/txtRolled"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/txtPlayerTwo"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#9099b7" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtRolled"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/dice1" />
 
 </RelativeLayout>
