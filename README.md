@@ -1,7 +1,7 @@
 # Welcome to PIG
 
 ### Game Rules:
-The dice game is called "Pig" and is a simple two-player game. The rules and more information about the game can be found here on its Wikipedia page, but the simple rules are as follows:
+The dice game is called "Pig" and is a simple two-player game. The simple rules are as follows:
 
 * Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
 * If the player rolls a 1, they score nothing and it becomes the next player's turn.
