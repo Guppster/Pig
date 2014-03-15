@@ -1,3 +1,4 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/actionReset" android:title="@string/menuReset" android:visible="true"></item>
 
 </menu>

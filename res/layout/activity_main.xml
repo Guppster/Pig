@@ -35,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/hello_world"
-        android:textColor="#9099b7" />
+        android:text="@string/txtReady"
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/txtPlayerOne"
@@ -50,7 +50,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:paddingLeft="10dp"
     	android:layout_centerHorizontal="true"
-        android:textColor="#9099b7" />
+        android:textColor="#ffffff" />
     
      <TextView
         android:id="@+id/txtPlayerTwo"
@@ -63,7 +63,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:paddingLeft="10dp"
     	android:layout_centerHorizontal="true"
-        android:textColor="#9099b7" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/txtPlayerOneScore"
@@ -74,7 +74,7 @@
         android:layout_below="@+id/txtPlayerTwoScore"
         android:text="0"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#9099b7" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/txtPlayerTwoScore"
@@ -87,10 +87,10 @@
         android:layout_toRightOf="@+id/txtPlayerTwo"
         android:text="0"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#9099b7" />
+        android:textColor="#ffffff" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imgDice"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/txtRolled"

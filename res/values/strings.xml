@@ -8,5 +8,7 @@
     <string name="btnHold">Hold</string>
     <string name="txtPlayerOne">Player 1:</string>
     <string name="txtPlayerTwo">Player 2:</string>
+    <string name="txtReady">Player 1\'s Turn</string>
+    <string name="menuReset">Reset</string>
 
 </resources>
