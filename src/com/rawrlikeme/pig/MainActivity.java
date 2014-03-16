@@ -12,6 +12,9 @@ public class MainActivity extends Activity {
 
 	private Piggy mPiggy = new Piggy();
 	
+	private int tempScore = 0, tempRoll  = 0;
+	private String labelRoll = "", labelScore = "";
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,8 +31,34 @@ public class MainActivity extends Activity {
 		RollButton.setOnClickListener(new View.OnClickListener() {
 			// What to do when the user clicks 'Roll'
 			public void onClick(View arg0) {
-				String answer = "Yes";
-				PlayerOneScoreLabel.setText(answer);
+				tempRoll = mPiggy.rollDie();
+				tempScore += tempRoll;
+				labelRoll = String.valueOf(tempRoll);
+				labelScore = String.valueOf(tempScore);
+				
+				PlayerOneScoreLabel.setText(labelScore);
+				
+				switch(tempRoll) {
+					case 1:
+						DiceImage.setImageResource(R.drawable.dice1);
+						tempScore = 0;
+				        break;
+					case 2:
+						DiceImage.setImageResource(R.drawable.dice2);
+				        break;
+					case 3:
+						DiceImage.setImageResource(R.drawable.dice3);
+				        break;
+					case 4:
+						DiceImage.setImageResource(R.drawable.dice4);
+				        break;
+					case 5:
+						DiceImage.setImageResource(R.drawable.dice5);
+				        break;
+					case 6:
+						DiceImage.setImageResource(R.drawable.dice6);
+				        break;
+				}
 			}
 			
 		});
