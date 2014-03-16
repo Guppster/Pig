@@ -35,9 +35,9 @@ public final class R {
         public static final int btnRoll=0x7f080001;
         public static final int imgDice=0x7f080007;
         public static final int txtPlayerOne=0x7f080003;
-        public static final int txtPlayerOneScore=0x7f080005;
+        public static final int txtPlayerOneScore=0x7f080006;
         public static final int txtPlayerTwo=0x7f080004;
-        public static final int txtPlayerTwoScore=0x7f080006;
+        public static final int txtPlayerTwoScore=0x7f080005;
         public static final int txtRolled=0x7f080002;
     }
     public static final class layout {

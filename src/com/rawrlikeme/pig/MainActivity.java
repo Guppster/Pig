@@ -25,8 +25,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		// Declare our View variables
-		final TextView PlayerOneScoreLabel = (TextView) findViewById(R.id.txtPlayerOneScore); // TextView for Player1's score
-		final TextView PlayerTwoScoreLabel = (TextView) findViewById(R.id.txtPlayerTwoScore); // TextView for Player2's score
+		final TextView PlayerOneScoreLabel = (TextView) findViewById(R.id.txtPlayerTwoScore); // TextView for Player1's score
+		final TextView PlayerTwoScoreLabel = (TextView) findViewById(R.id.txtPlayerOneScore); // TextView for Player2's score
 		final TextView RolledLabel = (TextView) findViewById(R.id.txtRolled); // TextView for Player2's score
 		final Button HoldButton = (Button) findViewById(R.id.btnHold); // Button for the Hold method
 		final Button RollButton = (Button) findViewById(R.id.btnRoll); // Button for the Roll method
@@ -55,6 +55,7 @@ public class MainActivity extends Activity {
 							mPiggy.setCurrentPlayer(1);
 						}
 						tempScore = 0;
+						HoldButton.setVisibility(View.INVISIBLE);
 				        break;
 					case 2:
 						DiceImage.setImageResource(R.drawable.dice2);
@@ -82,12 +83,12 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				
 				if(mPiggy.getCurrentPlayer() == 1) {
-					mPiggy.setPlayer1Score(tempScore);
+					mPiggy.setPlayer1Score(tempScore + mPiggy.getPlayer1Score());
 					PlayerOneScoreLabel.setText(labelScore);
 					mPiggy.setCurrentPlayer(2);
 				} 
 				else {
-					mPiggy.setPlayer2Score(tempScore);
+					mPiggy.setPlayer2Score(tempScore + mPiggy.getPlayer2Score());
 					PlayerTwoScoreLabel.setText(labelScore);
 					mPiggy.setCurrentPlayer(1);
 				}
@@ -118,7 +119,7 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	private void openAlert() {
+	private void openAlert(String alertMessage) {
 		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
 				context);
  
@@ -127,16 +128,9 @@ public class MainActivity extends Activity {
  
 			// set dialog message
 			alertDialogBuilder
-				.setMessage("Click yes to exit!")
+				.setMessage(alertMessage)
 				.setCancelable(false)
-				.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog,int id) {
-						// if this button is clicked, close
-						// current activity
-						MainActivity.this.finish();
-					}
-				  })
-				.setNegativeButton("No",new DialogInterface.OnClickListener() {
+				.setNegativeButton("Ok",new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog,int id) {
 						// if this button is clicked, just close
 						// the dialog box and do nothing
