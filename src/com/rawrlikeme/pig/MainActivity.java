@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
 						DiceImage.setImageResource(R.drawable.dice6);
 				        break;
 				}
-				
+				HoldButton.setVisibility(View.VISIBLE);
 			}
 			
 		});
@@ -105,6 +105,7 @@ public class MainActivity extends Activity {
 //						break;
 //				}
 				//openAlert();
+				HoldButton.setVisibility(View.INVISIBLE);
 				tempScore = 0;
 			}
 		});
