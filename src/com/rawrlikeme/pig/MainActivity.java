@@ -48,10 +48,12 @@ public class MainActivity extends Activity {
 					case 1:
 						DiceImage.setImageResource(R.drawable.dice1);
 						
-						if (mPiggy.getCurrentPlayer() == 1) {
+						if (mPiggy.getCurrentPlayer() == 1) 
+						{
 							mPiggy.setCurrentPlayer(2);
 						}
-						else {
+						else if (mPiggy.getCurrentPlayer() == 2) 
+						{
 							mPiggy.setCurrentPlayer(1);
 						}
 						tempScore = 0;
@@ -82,12 +84,14 @@ public class MainActivity extends Activity {
 
 			public void onClick(View v) {
 				
-				if(mPiggy.getCurrentPlayer() == 1) {
+				if(mPiggy.getCurrentPlayer() == 1) 
+				{
 					mPiggy.setPlayer1Score(tempScore + mPiggy.getPlayer1Score());
 					PlayerOneScoreLabel.setText(labelScore);
 					mPiggy.setCurrentPlayer(2);
 				} 
-				else {
+				else if(mPigggy.getCurrentPlayer() == 2)
+				{
 					mPiggy.setPlayer2Score(tempScore + mPiggy.getPlayer2Score());
 					PlayerTwoScoreLabel.setText(labelScore);
 					mPiggy.setCurrentPlayer(1);
